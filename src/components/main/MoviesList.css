@@ -1,0 +1,94 @@
+
+.new-movies-list {
+    width: 100%;
+    background-color: transparent !important;
+}
+
+.movies-list__title {
+    margin: 0 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.movies-list__title a {
+    margin: 0;
+    font-weight: 400;
+    background-color: transparent !important;
+}
+
+.new-movies-list__item {
+    margin: 12px auto 48px;
+    cursor: pointer;
+}
+
+.list-item__detail {
+    border-radius: 8px;
+    position: relative;
+    margin: 16px auto;
+    max-width: 200px;
+
+}
+
+.chapter {
+    position: absolute;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    top: 0;
+    left: 0;
+    background-color: rgb(20,15,15);
+    border-radius: 6px;
+}
+
+.list-item__detail img {
+    width: 170px;
+    border-radius: 8px;
+    height: 257px;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.list-item__detail img:hover {
+    transform: scale(1.07);
+}
+
+.List-item__link {
+    text-decoration: none;
+    color: rgb(240, 235, 235);
+}
+
+.list-item__detail h4 {
+    margin: 6px 10px;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    height: 3.6rem;
+    transition: all 0.4 ease-in-out;
+    background-color: transparent !important;
+
+    /* Hiển thị ... khi thừa text  */
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.category {
+    margin: 0;
+    font-weight: 400;
+    background-color: transparent!important;
+    color: rgb(192, 191, 197);
+    text-decoration: underline;
+    color: yellow;
+}
+
+.movies-list__title a:hover,
+.list-item__detail h4:hover,
+.category:hover {
+    font-weight: 500;
+}
+

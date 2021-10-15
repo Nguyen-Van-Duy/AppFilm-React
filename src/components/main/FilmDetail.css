@@ -1,0 +1,9 @@
+.container-detail__list {
+    margin-top: 150px;
+}
+
+@media (max-width: 740px) {
+    .container-detail__list {
+        margin-top: 80px;
+    }
+}

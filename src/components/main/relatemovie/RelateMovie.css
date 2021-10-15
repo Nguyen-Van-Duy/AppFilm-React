@@ -1,0 +1,20 @@
+.relate-movie {
+    margin: 60px 0;
+    background-color: transparent !important;
+}
+
+.relate-movie h2 {
+    color: yellow;
+}
+
+.slick-arrow.slick-prev::before,
+.slick-arrow.slick-next::before {
+    color: rgb(134, 133, 133);
+    font-size: 3rem;
+}
+
+@media (max-width: 740px ) {
+    .relate-movie {
+        display: none;
+    }
+}

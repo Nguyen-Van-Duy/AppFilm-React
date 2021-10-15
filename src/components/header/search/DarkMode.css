@@ -1,0 +1,28 @@
+.header-right {
+    display: flex;
+    cursor: pointer;
+}
+
+.header__icon {
+    padding: 0 10px;
+}
+
+.header__icon--size {
+    font-size: 2rem;
+}
+
+.header__icon--size:hover {
+    color: rgb(155, 155, 151) !important;
+
+}
+
+.show-on-search {
+    display: none;
+}
+
+
+@media (max-width: 740px) {
+    .show-on-search {
+        display: block;
+    }
+}
