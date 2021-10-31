@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Pagination from './Pagination';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -13,6 +13,7 @@ const ContentDetail = ({result, listItemFilm}) => {
 
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(1);
+    const getValueScrollY = useRef();
 
     //lấy số tập
     const episodes = listItemFilm.map(chapter => {
@@ -31,6 +32,11 @@ const ContentDetail = ({result, listItemFilm}) => {
     const currentPosts = listItemFilm.slice(indexOfFirstPost, indexOfLastPost);
 
     const paginateHandler = (pageNumber) => setCurrentPage(pageNumber);
+
+    const handleScrollFilm = () => {
+        window.scrollTo(0, getValueScrollY.current.offsetTop);
+
+    }
 
     return (<Card>
         <div className="detail__list-body">
@@ -68,15 +74,15 @@ const ContentDetail = ({result, listItemFilm}) => {
                                     </span>
                                 </li>
                             </ul>
-                            <a href="#film" className='content-link'>
+                            <span className='content-link' onClick={handleScrollFilm}>
                                 <span className="watch-movie"><i className="fa fa-play"></i> Xem ngay</span>
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
             <div id='film'></div>
-            <div className="detail__list-video">
+            <div className="detail__list-video" ref={getValueScrollY}>
                 {currentPosts.map((filmss, index) => {
                     if (filmss.url.includes('https://streamtape.com')) {
                         return (<video key={index} controls className='detail__list-movie'

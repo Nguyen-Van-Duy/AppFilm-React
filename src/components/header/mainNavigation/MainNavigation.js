@@ -2,6 +2,9 @@ import { NavLink } from 'react-router-dom';
 import { Fragment } from 'react';
 import './MainNavigation.css';
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const listLink = [
     {
@@ -43,11 +46,16 @@ export const listLink = [
     
 ]
 
+
 const MainNavigation = (props) => {
 
     const darkMode = useSelector(state => state.darkmode.isDarkmode)
     const darkmode = useSelector(state => state.darkmode.darkmode)
     const light = useSelector(state => state.darkmode.light)
+
+    useEffect(() => {
+        AOS.init();
+    },[])
     
     return (
         <Fragment>
@@ -57,7 +65,12 @@ const MainNavigation = (props) => {
                 <ul>
                     {listLink.map(item => { 
                         return (
-                        <li key={item.id} className='link-item'>
+                        <li key={item.id} className='link-item' 
+                        onClick={() => props.onModal()}
+                        data-aos="zoom-in" data-aos-once="false" 
+                        data-aos-anchor-placement="top"
+                        data-aos-duration="1000"
+                        >
                             {/* darkMode ? darkmode : light */}
                             <NavLink to={item.link} style={darkMode ? darkmode : light}><i className={item.icon}></i> {item.title}</NavLink></li>
                         )

@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from'react-router-dom';
 import PaginationPage from './moviepages/PaginationPage';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const image = 'https://anhdepfree.com/wp-content/uploads/2020/06/hinh-anh-xin-loi-vk.jpg';
 const pathError = 'Thế Giới BL và Chàng Trai Không Muốn Bị Bẻ Cong';
@@ -23,6 +25,10 @@ const MovieGenre = ({listData, title}) => {
         setCurrentPage(page);
     }
 
+    useEffect(() => {
+        AOS.init();
+    },[])
+
     return (
         <div className="movies-list">
             <div className="new-movies-list" style={isDarkMode ? dark : light}>
@@ -34,7 +40,10 @@ const MovieGenre = ({listData, title}) => {
                         {currentPosts.map((data, index) => {
                             if( data.title !== 'Kẻ Thế Mạng - Self/Less') {
                                 return (
-                                    <div className="col l-3" key={index}>
+                                    <div className="col l-3" key={index} 
+                                    data-aos="fade-right" data-aos-once="false" 
+                                    data-aos-anchor-placement="top"
+                                    data-aos-duration="300">
                                         <Link className='List-item__link' style={isDarkMode ? {} : light} to={data.title}>
                                             <div className="list-item__detail">
                                                 <img src={`${data.title === pathError ? image : data.imageUrl}`} alt={data.title} />

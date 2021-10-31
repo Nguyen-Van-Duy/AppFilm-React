@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './MoviesList.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const image = 'https://anhdepfree.com/wp-content/uploads/2020/06/hinh-anh-xin-loi-vk.jpg';
 const pathError = 'Thế Giới BL và Chàng Trai Không Muốn Bị Bẻ Cong';
@@ -37,6 +39,10 @@ const MoviesList = (props) => {
 
     ]
 
+    useEffect(() => {
+        AOS.init();
+    },[])
+
     return (
         <div className="movies-list">
             {MOVIES.map((listData, index) => (
@@ -50,7 +56,10 @@ const MoviesList = (props) => {
                             {listData.listFilm.map((data, index) => {
                                 if(index < 12) {
                                     return (
-                                        <div className="col l-3" key={index}>
+                                        <div className="col l-3" key={index} 
+                                        data-aos="fade-right" data-aos-once="false" 
+                                        data-aos-anchor-placement="top"
+                                        data-aos-duration="300">
                                             <Link className='List-item__link' style={isDarkMode ? {} : light} to={data.title}>
                                                 <div className="list-item__detail">
                                                     <img src={`${data.title === pathError ? image : data.imageUrl}`} alt={data.title} />

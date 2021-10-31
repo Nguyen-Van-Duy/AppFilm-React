@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 
 const Main = () => {
     const dataFilm = useSelector(state => state.datafilm.dataFilm)
+    console.log(dataFilm);
     
     return (
         <Fragment>

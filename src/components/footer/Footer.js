@@ -22,6 +22,7 @@ const Footer = () => {
         <footer style={isdarkMode ? {} : light}>
             <Card>
                 <div className="footer" style={isdarkMode ? {} : light}>
+                    <h2 style={isdarkMode ? {} : light} onClick={()=>window.scrollTo(0,0)}>DUY FILM</h2>
                     <div className="footer__list">
                         <li><i className="fas fa-id-card"></i>Liên hệ</li>
                         <li><i className="far fa-newspaper"></i>Giới thiệu</li>
@@ -38,11 +39,11 @@ const Footer = () => {
                         <li><i className="fab fa-facebook-square"></i>Facebook</li>
                     </div>
                 </div>
-                <span className="footer__info">Copy right @ By Nguyen Van Duy</span>
                 {valueScrollY && <div className='scroll-top' onClick={()=>window.scrollTo(0,0)}>
                     <i className="fas fa-angle-double-up"></i>
                 </div>}
             </Card>
+                <span className="footer__info">Copy right @ By Nguyen Van Duy</span>
         </footer>
     );
 };

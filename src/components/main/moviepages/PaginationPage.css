@@ -33,9 +33,9 @@
         padding: 0;
     }
     .container-pagination__item {
-        margin: 0;
+        margin: 1px 1px;
         min-width: 30px;
-        padding: 10px 0;
+        padding: 8px 0;
     
     } 
 }
