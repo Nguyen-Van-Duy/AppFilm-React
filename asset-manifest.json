@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/AppFilm-React/static/css/main.ef9ece22.chunk.css",
+    "main.js": "/AppFilm-React/static/js/main.6004c3e8.chunk.js",
+    "main.js.map": "/AppFilm-React/static/js/main.6004c3e8.chunk.js.map",
+    "runtime-main.js": "/AppFilm-React/static/js/runtime-main.2e2feb80.js",
+    "runtime-main.js.map": "/AppFilm-React/static/js/runtime-main.2e2feb80.js.map",
+    "static/css/2.34c0a3fd.chunk.css": "/AppFilm-React/static/css/2.34c0a3fd.chunk.css",
+    "static/js/2.cfa32f78.chunk.js": "/AppFilm-React/static/js/2.cfa32f78.chunk.js",
+    "static/js/2.cfa32f78.chunk.js.map": "/AppFilm-React/static/js/2.cfa32f78.chunk.js.map",
+    "static/js/3.dcf051a1.chunk.js": "/AppFilm-React/static/js/3.dcf051a1.chunk.js",
+    "static/js/3.dcf051a1.chunk.js.map": "/AppFilm-React/static/js/3.dcf051a1.chunk.js.map",
+    "index.html": "/AppFilm-React/index.html",
+    "static/css/2.34c0a3fd.chunk.css.map": "/AppFilm-React/static/css/2.34c0a3fd.chunk.css.map",
+    "static/css/main.ef9ece22.chunk.css.map": "/AppFilm-React/static/css/main.ef9ece22.chunk.css.map",
+    "static/js/2.cfa32f78.chunk.js.LICENSE.txt": "/AppFilm-React/static/js/2.cfa32f78.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2e2feb80.js",
+    "static/css/2.34c0a3fd.chunk.css",
+    "static/js/2.cfa32f78.chunk.js",
+    "static/css/main.ef9ece22.chunk.css",
+    "static/js/main.6004c3e8.chunk.js"
+  ]
+}
